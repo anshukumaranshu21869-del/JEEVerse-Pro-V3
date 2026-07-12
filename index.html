@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="JEEVerse Pro V3 - Professional JEE Main Mock Test Series Platform"
+  >
+
+  <title>JEEVerse Pro V3</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-logo">JV</div>
+
+    <h1>JEEVerse Pro</h1>
+
+    <div class="loading-bar">
+      <span></span>
+    </div>
+
+    <p>Preparing your learning experience...</p>
+  </div>
+
+
+  <!-- Test Series Dashboard -->
+  <main id="dashboardScreen" class="dashboard-screen hidden">
+
+    <!-- Top Navigation -->
+    <header class="top-header">
+
+      <div class="brand">
+        <div class="brand-logo">JV</div>
+
+        <div>
+          <h1>JEEVerse Pro</h1>
+          <p>JEE Main Test Series</p>
+        </div>
+      </div>
+
+
+      <div class="header-actions">
+
+        <button
+          id="themeBtn"
+          class="icon-btn"
+          type="button"
+          aria-label="Change theme"
+        >
+          ☾
+        </button>
+
+        <div class="student-avatar">
+          A
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-container">
+
+      <!-- Hero -->
+      <section class="dashboard-hero">
+
+        <div class="hero-content">
+
+          <span class="hero-badge">
+            JEE Main 2027 Preparation
+          </span>
+
+          <h2>
+            Practice smarter.
+            <span>Improve faster.</span>
+          </h2>
+
+          <p>
+            Attempt NTA-style mock tests, analyse your performance
+            and improve weak chapters with JEEVerse Pro.
+          </p>
+
+          <button
+            id="continueTestBtn"
+            class="primary-btn"
+            type="button"
+          >
+            Start Full Mock Test
+          </button>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+          <div class="hero-stat-card">
+            <strong id="availableTestsCount">6</strong>
+            <span>Available Tests</span>
+          </div>
+
+          <div class="hero-stat-card">
+            <strong id="completedTestsCount">0</strong>
+            <span>Tests Completed</span>
+          </div>
+
+          <div class="hero-stat-card">
+            <strong id="bestScoreValue">--</strong>
+            <span>Best Score</span>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Dashboard Stats -->
+      <section class="stats-grid">
+
+        <article class="stat-card">
+          <div class="stat-icon">📘</div>
+
+          <div>
+            <span>Total Questions</span>
+            <strong>450+</strong>
+          </div>
+        </article>
+
+
+        <article class="stat-card">
+          <div class="stat-icon">⏱️</div>
+
+          <div>
+            <span>Practice Time</span>
+            <strong id="practiceTimeValue">0h</strong>
+          </div>
+        </article>
+
+
+        <article class="stat-card">
+          <div class="stat-icon">🎯</div>
+
+          <div>
+            <span>Average Accuracy</span>
+            <strong id="averageAccuracyValue">--</strong>
+          </div>
+        </article>
+
+
+        <article class="stat-card">
+          <div class="stat-icon">🏆</div>
+
+          <div>
+            <span>Current Streak</span>
+            <strong id="streakValue">0 Days</strong>
+          </div>
+        </article>
+
+      </section>
+
+
+      <!-- Test Series Heading -->
+      <section class="section-heading">
+
+        <div>
+          <span class="section-label">Mock Tests</span>
+          <h2>Full Syllabus Test Series</h2>
+          <p>
+            Tests designed according to the latest JEE Main pattern.
+          </p>
+        </div>
+
+
+        <div class="filter-buttons">
+
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            type="button"
+          >
+            All
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="full"
+            type="button"
+          >
+            Full Tests
+          </button>
+
+          <button
+            class="filter-btn"
+            data-filter="chapter"
+            type="button"
+          >
+            Chapter Tests
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- Test Cards -->
+      <section id="testGrid" class="test-grid">
+
+        <article
+          class="test-card featured"
+          data-category="full"
+          data-test-id="mock-01"
+        >
+
+          <div class="test-card-top">
+
+            <span class="test-number">
+              Test 01
+            </span>
+
+            <span class="test-status available">
+              Available
+            </span>
+
+          </div>
+
+
+          <div class="test-icon physics-gradient">
+            ⚛
+          </div>
+
+          <h3>JEE Main Full Mock Test 1</h3>
+
+          <p>
+            Complete Physics, Chemistry and Mathematics mock test.
+          </p>
+
+
+          <div class="test-info-grid">
+
+            <div>
+              <span>Questions</span>
+              <strong>75</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>180 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>300 Marks</strong>
+            </div>
+
+          </div>
+
+
+          <div class="difficulty-row">
+
+            <span>Difficulty</span>
+
+            <div class="difficulty-dots">
+              <i class="active"></i>
+              <i class="active"></i>
+              <i></i>
+            </div>
+
+            <strong>Medium</strong>
+
+          </div>
+
+
+          <button
+            class="start-test-btn"
+            data-test-id="mock-01"
+            type="button"
+          >
+            Start Test
+          </button>
+
+        </article>
+
+
+        <article
+          class="test-card"
+          data-category="full"
+          data-test-id="mock-02"
+        >
+
+          <div class="test-card-top">
+            <span class="test-number">Test 02</span>
+            <span class="test-status soon">Coming Soon</span>
+          </div>
+
+          <div class="test-icon chemistry-gradient">
+            🧪
+          </div>
+
+          <h3>JEE Main Full Mock Test 2</h3>
+
+          <p>
+            Advanced full syllabus test based on current exam trends.
+          </p>
+
+          <div class="test-info-grid">
+            <div>
+              <span>Questions</span>
+              <strong>75</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>180 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>300 Marks</strong>
+            </div>
+          </div>
+
+          <button class="start-test-btn disabled" type="button" disabled>
+            Coming Soon
+          </button>
+
+        </article>
+
+
+        <article
+          class="test-card"
+          data-category="full"
+          data-test-id="mock-03"
+        >
+
+          <div class="test-card-top">
+            <span class="test-number">Test 03</span>
+            <span class="test-status soon">Coming Soon</span>
+          </div>
+
+          <div class="test-icon mathematics-gradient">
+            ∑
+          </div>
+
+          <h3>JEE Main Full Mock Test 3</h3>
+
+          <p>
+            Mixed-difficulty test with detailed performance analysis.
+          </p>
+
+          <div class="test-info-grid">
+            <div>
+              <span>Questions</span>
+              <strong>75</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>180 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>300 Marks</strong>
+            </div>
+          </div>
+
+          <button class="start-test-btn disabled" type="button" disabled>
+            Coming Soon
+          </button>
+
+        </article>
+
+
+        <article
+          class="test-card"
+          data-category="chapter"
+          data-test-id="physics-test"
+        >
+
+          <div class="test-card-top">
+            <span class="test-number">Physics</span>
+            <span class="test-status soon">Coming Soon</span>
+          </div>
+
+          <div class="test-icon physics-gradient">
+            ⚡
+          </div>
+
+          <h3>Physics Chapter Test</h3>
+
+          <p>
+            Chapter-wise Physics test with concept-level analysis.
+          </p>
+
+          <div class="test-info-grid">
+            <div>
+              <span>Questions</span>
+              <strong>25</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>60 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>100 Marks</strong>
+            </div>
+          </div>
+
+          <button class="start-test-btn disabled" type="button" disabled>
+            Coming Soon
+          </button>
+
+        </article>
+
+
+        <article
+          class="test-card"
+          data-category="chapter"
+          data-test-id="chemistry-test"
+        >
+
+          <div class="test-card-top">
+            <span class="test-number">Chemistry</span>
+            <span class="test-status soon">Coming Soon</span>
+          </div>
+
+          <div class="test-icon chemistry-gradient">
+            ⚗
+          </div>
+
+          <h3>Chemistry Chapter Test</h3>
+
+          <p>
+            NCERT-focused Chemistry test with detailed solutions.
+          </p>
+
+          <div class="test-info-grid">
+            <div>
+              <span>Questions</span>
+              <strong>25</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>60 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>100 Marks</strong>
+            </div>
+          </div>
+
+          <button class="start-test-btn disabled" type="button" disabled>
+            Coming Soon
+          </button>
+
+        </article>
+
+
+        <article
+          class="test-card"
+          data-category="chapter"
+          data-test-id="math-test"
+        >
+
+          <div class="test-card-top">
+            <span class="test-number">Mathematics</span>
+            <span class="test-status soon">Coming Soon</span>
+          </div>
+
+          <div class="test-icon mathematics-gradient">
+            π
+          </div>
+
+          <h3>Mathematics Chapter Test</h3>
+
+          <p>
+            Mathematics practice test with speed and accuracy tracking.
+          </p>
+
+          <div class="test-info-grid">
+            <div>
+              <span>Questions</span>
+              <strong>25</strong>
+            </div>
+
+            <div>
+              <span>Duration</span>
+              <strong>60 Min</strong>
+            </div>
+
+            <div>
+              <span>Maximum</span>
+              <strong>100 Marks</strong>
+            </div>
+          </div>
+
+          <button class="start-test-btn disabled" type="button" disabled>
+            Coming Soon
+          </button>
+
+        </article>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <!-- Test Instruction Screen -->
+  <section id="instructionScreen" class="instruction-screen hidden">
+
+    <div class="instruction-wrapper">
+
+      <button
+        id="backToDashboardBtn"
+        class="back-btn"
+        type="button"
+      >
+        ← Back to Tests
+      </button>
+
+
+      <div class="instruction-card">
+
+        <div class="instruction-logo">
+          JV
+        </div>
+
+        <span class="instruction-badge">
+          Full Syllabus Mock Test
+        </span>
+
+        <h1 id="selectedTestTitle">
+          JEE Main Full Mock Test 1
+        </h1>
+
+        <p>
+          Read all instructions carefully before starting your examination.
+        </p>
+
+
+        <div class="instruction-stats">
+
+          <div>
+            <span>Total Questions</span>
+            <strong>75</strong>
+          </div>
+
+          <div>
+            <span>Duration</span>
+            <strong>180 Minutes</strong>
+          </div>
+
+          <div>
+            <span>Maximum Marks</span>
+            <strong>300</strong>
+          </div>
+
+        </div>
+
+
+        <div class="instruction-list">
+
+          <h2>Important Instructions</h2>
+
+          <ul>
+            <li>
+              The test contains Physics, Chemistry and Mathematics sections.
+            </li>
+
+            <li>
+              Each correct answer carries 4 marks.
+            </li>
+
+            <li>
+              One mark will be deducted for an incorrect MCQ response.
+            </li>
+
+            <li>
+              Numerical-value questions have no negative marking.
+            </li>
+
+            <li>
+              The test will automatically submit when the timer reaches zero.
+            </li>
+
+            <li>
+              Do not refresh or close the browser during the test.
+            </li>
+          </ul>
+
+        </div>
+
+
+        <label class="agreement-row">
+
+          <input id="agreementCheckbox" type="checkbox">
+
+          <span>
+            I have read and understood all examination instructions.
+          </span>
+
+        </label>
+
+
+        <button
+          id="beginExamBtn"
+          class="primary-btn full-width"
+          type="button"
+          disabled
+        >
+          Begin Examination
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Exam Screen Placeholder -->
+  <section id="examScreen" class="exam-screen hidden">
+
+    <header class="exam-header">
+
+      <div class="brand">
+        <div class="brand-logo">JV</div>
+
+        <div>
+          <h2>JEEVerse Pro</h2>
+          <p id="examTitle">Full Mock Test 1</p>
+        </div>
+      </div>
+
+
+      <div class="exam-timer-box">
+        <span>Time Left</span>
+        <strong id="examTimer">03:00:00</strong>
+      </div>
+
+    </header>
+
+
+    <div class="exam-placeholder">
+
+      <div class="placeholder-icon">
+        🚀
+      </div>
+
+      <h2>CBT Exam Engine</h2>
+
+      <p>
+        Question system, timer, palette and result engine will be connected next.
+      </p>
+
+      <button
+        id="exitExamBtn"
+        class="secondary-btn"
+        type="button"
+      >
+        Return to Dashboard
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <span id="toastMessage">Action completed</span>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+
+</body>
+  </html>
