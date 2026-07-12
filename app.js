@@ -56,3 +56,63 @@ function initDashboard() {
   });
 
 }
+/* ==========================================
+   JEEVerse Pro V3
+   App Logic - Part 2
+========================================== */
+
+let selectedSubject = null;
+let examStarted = false;
+
+function selectSubject(subjectName){
+
+  selectedSubject = subjectName;
+
+  document.querySelectorAll(".subject-card").forEach(card=>{
+    card.classList.remove("active");
+  });
+
+  const card=document.querySelector(
+    `[data-subject="${subjectName}"]`
+  );
+
+  if(card){
+    card.classList.add("active");
+  }
+
+}
+
+function startExam(){
+
+  if(!selectedSubject){
+
+    alert("Please select a subject first.");
+
+    return;
+
+  }
+
+  examStarted=true;
+
+  console.log(
+    "Starting exam:",
+    selectedSubject
+  );
+
+  alert(
+    selectedSubject+
+    " exam will start in the next update."
+  );
+
+}
+
+const startButton=
+document.getElementById(
+"startExamBtn"
+);
+
+if(startButton){
+
+  startButton.onclick=startExam;
+
+}
